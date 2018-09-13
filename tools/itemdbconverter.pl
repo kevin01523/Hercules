@@ -110,8 +110,8 @@ sub parsedb (@) {
 			(?<Refineable>[0-9]*)[^,]*,[\s\t]*
 			(?<View>[0-9]*)[^,]*,[\s\t]*
 			{(?<Script>.*)},
-			{(?<OnEquip>.*)},
-			{(?<OnUnequip>.*)}
+			\{(?<OnEquip>.*)},
+			\{(?<OnUnequip>.*)}
 		/x ) {
 			my %cols = map { $_ => $+{$_} } keys %+;
 			print "/*\n" if $cols{prefix};

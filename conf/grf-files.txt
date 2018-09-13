@@ -4,9 +4,14 @@
 //-----------------------------------------
 //grf: C:\Program Files\Gravity\RO\rdata.grf
 //grf: C:\Program Files\Gravity\RO\data.grf
-
+grf: /mnt/d/ragnarok/07_clean_kRO_client/kRO_client_full/academy.grf
+grf: /mnt/d/ragnarok/07_clean_kRO_client/kRO_client_full/data.grf
+grf: /mnt/d/ragnarok/07_clean_kRO_client/kRO_client_full/rdata.grf
+grf: /mnt/d/ragnarok/07_clean_kRO_client/kRO_client_full/rathena_RENEWAL_2018.grf
+grf: /mnt/d/ragnarok/07_clean_kRO_client/new/rdata.grf
 //-----------------------------------------
 // Data Directory
 // Use the base folder, not the data\ path.
 //-----------------------------------------
 //data_dir: C:\Program Files\Gravity\RO\
+data_dir: /mnt/d/ragnarok/07_clean_kRO_client/kRO_client_full/
