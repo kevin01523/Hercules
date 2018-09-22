@@ -4320,4 +4320,21 @@ packet(0x96e,-1,clif->ackmergeitems);
 #endif
 #endif
 
+// 2018-09-19aRagexeRE
+#if PACKETVER_RE_NUM >= 20180919
+// new packets
+// changed packet sizes
+	packet(0x0b08,-1); // ZC_INVENTORY_START
+#endif
+
+// 2018-09-19aRagexe_zero
+#if PACKETVER_ZERO_NUM >= 20180919
+// new packets
+	packet(0x0b0e,-1,clif->pDull/*,XXX*/);
+	packet(0x0b0f,-1,clif->pDull/*,XXX*/);
+// changed packet sizes
+	packet(0x0b08,-1); // ZC_INVENTORY_START
+	packet(0x0b0d,10,clif->pDull/*,XXX*/);
+#endif
+
 #endif /* MAP_PACKETS_H */
