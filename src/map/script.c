@@ -5965,10 +5965,14 @@ static bool script_sprintf_helper(struct script_state *st, int start, struct Str
 static BUILDIN(mes)
 {
 	struct map_session_data *sd = script->rid2sd(st);
+
 	if (sd == NULL)
 		return true;
 
-	clif->scriptmes(sd, st->oid, script_getstr(st, 2));
+	if (script_hasdata(st, 2))
+		clif->scriptmes(sd, st->oid, script_getstr(st, 2));
+	else
+		clif->scriptmes(sd, st->oid, "");
 
 	return true;
 }
@@ -21117,8 +21121,8 @@ static BUILDIN(setquestinfo)
 		struct questinfo_itemreq item = { 0 };
 
 		item.nameid = script_getnum(st, 3);
-		item.min = script_getnum(st, 4);
-		item.max = script_getnum(st, 5);
+		item.min = script_hasdata(st, 4) ? script_getnum(st, 4) : 0;
+		item.max = script_hasdata(st, 5) ? script_getnum(st, 5) : 0;
 
 		if (itemdb->exists(item.nameid) == NULL) {
 			ShowWarning("buildin_setquestinfo: non existing item (%d) have been given.\n", item.nameid);
@@ -24960,8 +24964,8 @@ static void script_parse_builtin(void)
 		BUILDIN_DEF(__setr,"rv?"),
 
 		// NPC interaction
-		BUILDIN_DEF(mes,"s"),
-		BUILDIN_DEF(mesf,"s*"),
+		BUILDIN_DEF(mes, "?"),
+		BUILDIN_DEF(mesf, "s*"),
 		BUILDIN_DEF(next,""),
 		BUILDIN_DEF(close,""),
 		BUILDIN_DEF(close2,""),

@@ -557,6 +557,7 @@ HPExport const struct s_HPMDataCheck HPMDataCheck[] = {
 		{ "mapflag_skill_adjust", sizeof(struct mapflag_skill_adjust), SERVER_TYPE_MAP },
 		{ "mapit_interface", sizeof(struct mapit_interface), SERVER_TYPE_MAP },
 		{ "questinfo", sizeof(struct questinfo), SERVER_TYPE_MAP },
+		{ "questinfo_itemreq", sizeof(struct questinfo_itemreq), SERVER_TYPE_MAP },
 		{ "questinfo_qreq", sizeof(struct questinfo_qreq), SERVER_TYPE_MAP },
 		{ "spawn_data", sizeof(struct spawn_data), SERVER_TYPE_MAP },
 	#else
@@ -606,6 +607,7 @@ HPExport const struct s_HPMDataCheck HPMDataCheck[] = {
 		{ "NORMALITEM_INFO", sizeof(struct NORMALITEM_INFO), SERVER_TYPE_MAP },
 		{ "PACKET_CZ_ADD_ITEM_TO_MAIL", sizeof(struct PACKET_CZ_ADD_ITEM_TO_MAIL), SERVER_TYPE_MAP },
 		{ "PACKET_CZ_CHECKNAME", sizeof(struct PACKET_CZ_CHECKNAME), SERVER_TYPE_MAP },
+		{ "PACKET_CZ_MEMORIALDUNGEON_COMMAND", sizeof(struct PACKET_CZ_MEMORIALDUNGEON_COMMAND), SERVER_TYPE_MAP },
 		{ "PACKET_CZ_OPEN_UI", sizeof(struct PACKET_CZ_OPEN_UI), SERVER_TYPE_MAP },
 		{ "PACKET_CZ_PC_BUY_CASH_POINT_ITEM", sizeof(struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM), SERVER_TYPE_MAP },
 		{ "PACKET_CZ_PC_BUY_CASH_POINT_ITEM_sub", sizeof(struct PACKET_CZ_PC_BUY_CASH_POINT_ITEM_sub), SERVER_TYPE_MAP },
